@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap"
+          rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>website</title>
+</head>
+<body>
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+        <div class="mySlides">
+            <div class="numbertext">1 / 7</div>
+            <img class="122" src="Personal/Hankercheif of st veronica (1).png" alt="This is a digital illustration that was based on the 'Veil of Veronica' made in Krita" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">2 / 7</div>
+            <video style="width:100%;" class="122"
+                   utoplay plays-inline muted loop  ><meta content="This is a digital illustration drawn in an 'anime' style, animated on Adobe After Effects and Davinci Resolve">
+                <source src="Personal/kot11.mov" type="video/mp4" />
+            </video>
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">3 / 7</div>
+            <img class="122" src="Personal/Coding.png"  alt="This a responsive website was coded by me, using HTML, CSS and JavaScript on the WebStorm IDE" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">4 / 7</div>
+            <img class="122" src="Personal/elephant again (2).png" alt="This is a digital illustration of an elephant made on Krita" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">5 / 7</div>
+            <img class="122" src="Personal/IMG_3527.png" alt="This is a pencil drawing of a 'Hatsune Miku' plushie" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">6 / 7</div>
+            <img class="122" src="Personal/port this.png" alt="This is a digital illustration of characters from the game 'Hatsune Miku: Colorful Stage!' made on Krita" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">7 / 7</div>
+            <img class="122" src="Personal/field (1).png" alt="This is a digital illustration of a field made on Krita" style="width:100%">
+        </div>
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+    </div>
+</div>
+<div id="dropdown-section" class="drop" style="display: none">
+    <br>
+    <a href="index.html">Introduction</a>
+    <br>
+    <a href="Personal Works.html">Personal Works(digital illustration)</a>
+    <br>
+    <a href="School Works.html">School Works(C# coding)</a>
+    <br>
+    <a href="Final Year Project.html">Final Year Project(pixel art)</a>
+    <br>
+    <a href="Internship.html">Internship(motion graphic animation, graphic design)</a>
+    <br>
+    <a href="WIIP.html">WIIP(illustration, website coding)</a>
+    <br>
+    <a href="#bottompage">Contact</a>
+    <br>
+</div >
+<video class="videobgPW"    autoplay plays-inline muted loop>
+    <source src="Personal/kot11.mov" type="video/mp4" />
+</video>
+
+<div class="navbar">
+    <div class="menu">
+        <a href="index.html"><h3 class="logo">Calvin's Portfolio</h3></a>
+        <p class="logo">Personal Works</p>
+        <div  onclick="toggleDropdown()" class="hamburger-menu">
+            <p>check out my works</p><div  class="bar"></div>
+        </div>
+    </div>
+</div>
+
+<div class="opening">
+    <div>
+        <p class="openingtext">
+            These are the personal works I have done in my free time.<br>
+            They include illustrations, Coding and animations.<br>
+
+        </p>
+    </div>
+</div>
+
+<div class="whole">
+    <div class="allimg">
+        <div class="idkdiv">
+            <p id="das" class="rrrr">This is an illustration</p>
+            <a >
+                <img id="thisimg1" class="imgg" src="Personal/Hankercheif of st veronica (1).png"  onclick="openModal();currentSlide(1);" alt="This is a digital illustration that was based on the 'Veil of Veronica' made in Krita" />
+            </a>
+        </div>
+        <div class="idkdiv">
+            <p class="rrrr">This is an animated illustration</p>
+            <a >
+                <video style="width:100%;" class="imgg" onclick="openModal();currentSlide(2);" alt="This is a digital illustration drawn in an 'anime' style, animated on Adobe After Effects and Davinci Resolve" autoplay plays-inline muted loop>
+                    <source src="Personal/kot11.mov" type="video/mp4" />
+                </video>
+
+            </a>
+        </div>
+        <div class="idkdiv">
+            <p class="rrrr">This is my coding</p>
+            <a >
+                <img id="thisimg3" class="imgg" src="Personal/Coding.png" onclick="openModal();currentSlide(3);" alt="This website was coded by me, using HTML, CSS and JavaScript on the WebStorm IDE" />
+            </a>
+        </div>
+        <div class="idkdiv">
+            <p class="rrrr">This is an illustration</p>
+            <a >
+                <img id="thisimg4" class="imgg" src="Personal/elephant again (2).png" onclick="openModal();currentSlide(4)" alt="This is a digital illustration of an elephant made on Krita" />
+            </a>
+        </div>
+        <div class="idkdiv">
+            <p class="rrrr">This is a sketch</p>
+            <a >
+                <img id="thisimg5" class="imgg" src="Personal/IMG_3527.png" onclick="openModal();currentSlide(5)" alt="This is a pencil sketch of a 'Hatsune Miku' plushie" />
+            </a>
+        </div>
+        <div class="idkdiv">
+            <p class="rrrr">This is an illustration</p>
+            <a >
+                <img id="thisimg6" class="imgg" src="Personal/port this.png" onclick="openModal();currentSlide(6)" alt="This is a digital illustration of characters from the game 'Hatsune Miku: Colorful Stage!' made on Krita" />
+            </a>
+        </div>
+        <div class="idkdiv">
+            <p class="rrrr">This is an illustration</p>
+            <a >
+                <img id="thisimg7" class="imgg" src="Personal/field (1).png" onclick="openModal();currentSlide(7)" alt="This is a digital illustration of a field made on Krita" />
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div  class="footer">
+    <div class="rrrr">
+        <p id="bottompage"><a href="Mailto:ifcc.calvin@gmail.com">Email: ifcc.calvin@gmail.com</a></p>
+        <p><a href="https://www.linkedin.com/in/calvin-see-5112b523b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B200QXI4gS%2F6RCoXRyAhRPA%3D%3D">Linkedin</a></p>
+        <p><a >Phone Number: 65+ 9189-4205</a></p>
+    </div>
+</div>
+
+<script>
+    const hamburger_menu = document.querySelector(".hamburger-menu");
+    const container = document.querySelector(".container");
+    hamburger_menu.addEventListener("click", () => {
+        container.classList.toggle("active");
+    })
+
+
+    function toggleDropdown() {
+        var x = document.getElementById("dropdown-section");
+        if (x.style.display === "none") {
+            x.style.display = "flex";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+
+
+
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    // Close the Modal
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        var newIndex = slideIndex + n;
+        if (newIndex < 1 || newIndex > document.getElementsByClassName("mySlides").length) return;
+        showSlides(slideIndex = newIndex);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        if (n < 1 || n > document.getElementsByClassName("mySlides").length) return;
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("122");
+        var videoElement = dots[slideIndex - 1];
+        var metaTag = videoElement.querySelector("meta");
+
+
+        if (n > slides.length) slideIndex = slides.length;
+        if (n < 1) slideIndex = 1;
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = metaTag ? metaTag.getAttribute('content') : dots[slideIndex-1].alt ;
+    }
+</script>
+</body>
+
+
+</html>
