@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap"
+          rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>website</title>
+</head>
+
+
+<body>
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+        <div class="mySlides">
+            <div class="numbertext">1 / 5</div>
+            <img class="122" src="elephant.png" alt="real ele" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">2 / 5</div>
+            <img class="122" src="African_elephant_warning_raised_trunk.jpg" alt="real ele" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">3 / 5</div>
+            <img class="122" src="020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg"  alt="cat" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">4 / 5</div>
+            <img class="122" src="Personal/Kot.gif" alt="kot" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">5 / 5</div>
+            <img class="122" src="Personal/elephant again (2).png" alt="elephant" style="width:100%">
+        </div>
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+    </div>
+</div>
+
+<div id="dropdown-section" class="drop" style="display: none">
+    <br>
+    <a href="index.html">Introduction</a>
+    <br>
+    <a href="Personal Works.html">Personal Works(digital illustration)</a>
+    <br>
+    <a href="School Works.html">School Works(C# coding)</a>
+    <br>
+    <a href="Final Year Project.html">Final Year Project(pixel art)</a>
+    <br>
+    <a href="Internship.html">Internship(motion graphic animation, graphic design)</a>
+    <br>
+    <a href="WIIP.html">WIIP(illustration, website coding)</a>
+    <br>
+    <a href="#bottompage">Contact</a>
+    <br>
+</div>
+<video class="videobg"  autoplay plays-inline muted loop>
+    <source src="blender final.mp4" type="video/mp4" />
+</video>
+
+<div class="navbar">
+    <div class="menu">
+        <a href="index.html"><h3 class="logo">Calvin's Portfolio</h3></a>
+        <p class="logo">Internship</p>
+        <div  onclick="toggleDropdown()" class="hamburger-menu">
+            <p>check out my works</p><div  class="bar"></div>
+        </div>
+    </div>
+</div>
+
+<div class="whole">
+    <div class="allimg">
+        <div class="idkdiv">
+            <p id="das" class="rrrr">This is an elephant</p>
+            <a >
+                <img id="thisimg1" class="imgg" src="elephant.png"  onclick="openModal();currentSlide(1);" alt="elephatn Text" />
+            </a>
+        </div>
+        <div class="idkdiv">
+            <p class="rrrr">This is an elephant</p>
+            <a >
+                <img id="thisimg2" class="imgg" src="African_elephant_warning_raised_trunk.jpg" onclick="openModal();currentSlide(2);" alt="Alternvsate Text" />
+            </a>
+        </div>
+        <div class="idkdiv">
+            <p class="rrrr">This is a lion</p>
+            <a >
+                <img id="thisimg3" class="imgg" src="020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg" onclick="openModal();currentSlide(3);" alt="Alternaggsdte Text" />
+            </a>
+        </div>
+        <div class="idkdiv">
+            <p class="rrrr">This is a lion</p>
+            <a >
+                <img id="thisimg4" class="imgg" src="Personal/Kot.gif" onclick="openModal();currentSlide(4)" alt="Alternate Tweeasext" />
+            </a>
+        </div>
+        <div class="idkdiv">
+            <p class="rrrr">This is a lion</p>
+            <a >
+                <img id="thisimg5" class="imgg" src="Personal/elephant again (2).png" onclick="openModal();currentSlide(5)" alt="Alternate Tex1t" />
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div  class="footer">
+    <div class="rrrr">
+        <p id="bottompage"><a href="Mailto:ifcc.calvin@gmail.com">Email: ifcc.calvin@gmail.com</a></p>
+        <p><a href="https://www.linkedin.com/in/calvin-see-5112b523b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B200QXI4gS%2F6RCoXRyAhRPA%3D%3D">Linkedin</a></p>
+        <p><a >Phone Number: 65+ 9189-4205</a></p>
+    </div>
+</div>
+
+
+
+<script>
+    const hamburger_menu = document.querySelector(".hamburger-menu");
+    const container = document.querySelector(".container");
+    hamburger_menu.addEventListener("click", () => {
+        container.classList.toggle("active");
+    })
+
+
+    function toggleDropdown() {
+        var x = document.getElementById("dropdown-section");
+        if (x.style.display === "none") {
+            x.style.display = "flex";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+
+
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    // Close the Modal
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        var newIndex = slideIndex + n;
+        if (newIndex < 1 || newIndex > document.getElementsByClassName("mySlides").length) return;
+        showSlides(slideIndex = newIndex);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        if (n < 1 || n > document.getElementsByClassName("mySlides").length) return;
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("122");
+        var videoElement = dots[slideIndex - 1];
+        var metaTag = videoElement.querySelector("meta");
+
+
+        if (n > slides.length) slideIndex = slides.length;
+        if (n < 1) slideIndex = 1;
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = metaTag ? metaTag.getAttribute('content') : dots[slideIndex-1].alt ;
+    }
+</script>
+</body>
+
+</html>

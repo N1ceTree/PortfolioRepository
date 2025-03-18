@@ -1,0 +1,2 @@
+This is the updated main character
+This does not have all of the models of the character like the ones in the back because it does not need to be updated or the players will not see like the "character_main_IdleRight2" for example
